@@ -7,5 +7,6 @@
 		"Description": "A super awesome mod!",
 		"GameVersions": ["0.9.0.0"],
 		"Author": "Jesse Schramm",
+		"Dependencies": [],
 	}
 }

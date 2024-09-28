@@ -1,0 +1,30 @@
+Thank you so much for wanting to mod Starground!
+
+This template project is setup for modding, and can be used as a base example for your own mod.
+
+Check out the wiki page on the modding Github here: https://github.com/chip003/starground-modding
+
+-------------------------INFO.JSON-------------------------
+
+	You'll need to include a JSON file called 'info.json'. This will contain crucial information about your mod.
+
+	An example 'info.json' file is already included in the project (or can be downloaded), which can be modified and used as a template.
+
+	Below goes over what needs to be inside of 'info.json':
+
+	* Format		| This is a number that denotes the current version of the 'info.json' file. Different versions will be formatted differently.
+
+	* ID			| ID is a unique identifier for your mod. This can cause serious issues if it's the same as another mod, so air on the side of length.
+					| Including an author name and mod name like 'bbg_recipe_overhaul' is good, something like 'my_mod' is bad!
+					| This should never change once your mod is created or updated. Pick something unique and stick with it!
+				
+	* DisplayName	| Display name is the name that is displayed for your mod. This can be freely changed when updating your mod.
+					| This is shown in the mod menu, and any other place your mod is listed. This name also supports BBCode tags.
+					
+	* ModVersion	| This is a version identifier for your mod. This is so you and players can keep track of what version your mod is.
+
+	* Description	| This is a description for your mod. This will be displayed in the mod menu, and supports BBCode tags.
+
+	* GameVersions	| This is an array that holds strings for what game versions are supported. If your mod works in multiple versions, list them there.
+
+	* Author		| This is you! Put whatever name you would like so you can take credit for your hard work.
