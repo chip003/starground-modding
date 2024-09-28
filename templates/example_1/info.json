@@ -1,0 +1,11 @@
+{
+	"Format": 1,
+	"Data": {
+		"ID": "bbg_templatemod_1",
+		"DisplayName": "Awesome mod!",
+		"ModVersion": "1.0",
+		"Description": "A super awesome mod!",
+		"GameVersions": ["0.9.0.0"],
+		"Author": "Jesse Schramm",
+	}
+}

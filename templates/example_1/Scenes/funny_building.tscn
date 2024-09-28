@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://3cjdyv0ampev"]
+
+[ext_resource type="Script" path="res://Scripts/funny_building.gd" id="1_8q1b0"]
+[ext_resource type="Texture2D" uid="uid://tvc4phxwm267" path="res://Sprites/mod_building_example.png" id="1_tyyk7"]
+[ext_resource type="PackedScene" uid="uid://mujpxyvrkyja" path="res://Scenes/inventory_component.tscn" id="3_0k1gu"]
+[ext_resource type="PackedScene" uid="uid://cwp641fjj4pdk" path="res://Scenes/save_component.tscn" id="4_081hg"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_11cr0"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4ckm"]
+size = Vector2(16, 16)
+
+[node name="FunnyBuilding" type="StaticBody2D"]
+script = ExtResource("1_8q1b0")
+
+[node name="mainSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_tyyk7")
+
+[node name="inventory_component" parent="." instance=ExtResource("3_0k1gu")]
+inventoryName = "Funny Building"
+
+[node name="save_component" parent="." instance=ExtResource("4_081hg")]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_interval = 0.05
+delta_interval = 0.05
+replication_config = SubResource("SceneReplicationConfig_11cr0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a4ckm")
