@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://4w4s4frfn3r0"]
+
+[ext_resource type="Script" path="res://Scripts/tree.gd" id="1_old3k"]
+[ext_resource type="Texture2D" uid="uid://cmjvqifdeyy5y" path="res://Sprites/tree.png" id="2_bnfnt"]
+[ext_resource type="Shader" path="res://Scenes/wind_shader.gdshader" id="2_kj2l4"]
+[ext_resource type="Texture2D" uid="uid://dsm1ktek3cxke" path="res://Sprites/tree_shadow.png" id="3_kai3l"]
+[ext_resource type="PackedScene" uid="uid://cwp641fjj4pdk" path="res://Scenes/save_component.tscn" id="4_mynyw"]
+[ext_resource type="Texture2D" uid="uid://cib43bnwkpfvu" path="res://Sprites/dust_particle.png" id="6_jp2yq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbqap"]
+resource_local_to_scene = true
+shader = ExtResource("2_kj2l4")
+shader_parameter/total_offset = 0.0
+shader_parameter/total_speed = 1.0
+shader_parameter/strength = 1.0
+shader_parameter/first_variation = 0.8
+shader_parameter/second_variation = 0.6
+shader_parameter/third_variation = 1.45
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ns8cr"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wm7c1"]
+size = Vector2(12, 8)
+
+[sub_resource type="Curve" id="Curve_v7l23"]
+max_value = 2.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_3h360"]
+offsets = PackedFloat32Array(0, 0.174033, 1)
+colors = PackedColorArray(0.207843, 0.207843, 0.298039, 1, 0.207843, 0.207843, 0.298039, 1, 0.207843, 0.207843, 0.298039, 0)
+
+[node name="tree" type="StaticBody2D" groups=["Resources", "Save", "Trees"]]
+collision_layer = 5
+script = ExtResource("1_old3k")
+
+[node name="mainSprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_hbqap")
+texture = ExtResource("2_bnfnt")
+offset = Vector2(0, -14)
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+z_index = -1
+position = Vector2(0, 1.5)
+texture = ExtResource("3_kai3l")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_interval = 0.05
+delta_interval = 0.05
+replication_config = SubResource("SceneReplicationConfig_ns8cr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wm7c1")
+
+[node name="save_component" parent="." instance=ExtResource("4_mynyw")]
+
+[node name="DecayParticles" type="CPUParticles2D" parent="."]
+emitting = false
+one_shot = true
+explosiveness = 1.0
+texture = ExtResource("6_jp2yq")
+emission_shape = 3
+emission_rect_extents = Vector2(4, 4)
+direction = Vector2(0, -1)
+gravity = Vector2(0, 0)
+initial_velocity_max = 25.0
+angle_max = 360.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_v7l23")
+color_ramp = SubResource("Gradient_3h360")

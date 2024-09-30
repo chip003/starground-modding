@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://bse4ro4rfugij"]
+
+[ext_resource type="Script" path="res://Scripts/iron_rock.gd" id="1_7knp1"]
+[ext_resource type="Texture2D" uid="uid://m53761a0tmsq" path="res://Sprites/rock_mask.png" id="2_anft3"]
+[ext_resource type="Texture2D" uid="uid://dxndipjhqwopg" path="res://Sprites/iron_rock.png" id="2_v55aa"]
+[ext_resource type="PackedScene" uid="uid://cwp641fjj4pdk" path="res://Scenes/save_component.tscn" id="3_1g5v6"]
+[ext_resource type="Texture2D" uid="uid://b0rk03gtubitn" path="res://Sprites/rock.png" id="3_yp1oh"]
+[ext_resource type="Texture2D" uid="uid://cib43bnwkpfvu" path="res://Sprites/dust_particle.png" id="6_rvveh"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_v3t27"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nk6cu"]
+size = Vector2(16, 10)
+
+[sub_resource type="Curve" id="Curve_odkqh"]
+max_value = 2.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_bmx6c"]
+offsets = PackedFloat32Array(0, 0.174033, 1)
+colors = PackedColorArray(0.207843, 0.207843, 0.298039, 1, 0.207843, 0.207843, 0.298039, 1, 0.207843, 0.207843, 0.298039, 0)
+
+[node name="iron_rock" type="StaticBody2D" groups=["Resources", "Rocks", "Save"]]
+collision_layer = 5
+script = ExtResource("1_7knp1")
+
+[node name="mainSprite" type="Sprite2D" parent="."]
+clip_children = 1
+position = Vector2(0, 6)
+texture = ExtResource("2_anft3")
+offset = Vector2(0, -8)
+
+[node name="Rock" type="Sprite2D" parent="mainSprite"]
+position = Vector2(0, -8)
+texture = ExtResource("3_yp1oh")
+
+[node name="Ore" type="Sprite2D" parent="mainSprite/Rock"]
+texture = ExtResource("2_v55aa")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_interval = 0.05
+delta_interval = 0.05
+replication_config = SubResource("SceneReplicationConfig_v3t27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_nk6cu")
+
+[node name="save_component" parent="." instance=ExtResource("3_1g5v6")]
+path = "res://Scenes/iron_rock.tscn"
+
+[node name="DecayParticles" type="CPUParticles2D" parent="."]
+emitting = false
+one_shot = true
+explosiveness = 1.0
+texture = ExtResource("6_rvveh")
+emission_shape = 3
+emission_rect_extents = Vector2(4, 4)
+direction = Vector2(0, -1)
+gravity = Vector2(0, 0)
+initial_velocity_max = 25.0
+angle_max = 360.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_odkqh")
+color_ramp = SubResource("Gradient_bmx6c")
