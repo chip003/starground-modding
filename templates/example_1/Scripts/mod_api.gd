@@ -2,13 +2,14 @@ extends Node
 
 ## Welcome to the ModAPI script!
 
-## Script Version: v1.0
+## Script Version: v1.1
 
 # This is a helper script to make modding a lot easier, and to prevent conflicts with other mods.
 # You should always use these functions if they fulfill what you need to do.
 # Read through all functions below to see what they do (odds are you'll need them!)
 
 # If you have things that should be added here, or run into issues, let Jesse know!
+
 
 #---------------BEST PRACTICES---------------#
 
@@ -176,10 +177,9 @@ func add_cache_entry(resourcePath : String) -> void:
 # lootID | An ID for what loot table is being modified
 # entry  | A new data entry (typically an array formatted with weight first, and a string or resource next)
 func add_loot_entry(lootID : String, entry : Array) -> void:
-	var table : Array = Global.lootTable.get(lootID) 
-	if table.has(entry):
-		table.erase(entry)
-	table.push_back(entry)
+	Global.lootTable.merge({
+		lootID: [entry]
+	})
 	
 	
 ## This function will return a loot entry, taking into account its weighted values
