@@ -1,5 +1,6 @@
 {
 	"Format": 1,
+	"Script": "res://AwesomeMod/loader.gd",
 	"Data": {
 		"ID": "bbg_templatemod_1",
 		"DisplayName": "Awesome mod!",

@@ -25,3 +25,5 @@ func _init() -> void:
 	
 	## Making sure the funny building syncs on multiplayer
 	ModAPI.add_spawner_entry("res://Scenes/funny_building.tscn")
+	
+	#ModAPI.add_loot_entry("starground:loot_resource_nodes", [8, load("res://Scenes/uranium_rock.tscn")])
