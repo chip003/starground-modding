@@ -2,7 +2,7 @@ extends Node
 
 ## Welcome to the ModAPI script!
 
-## Script Version: v1.1
+## Script Version: v1.2
 
 # This is a helper script to make modding a lot easier, and to prevent conflicts with other mods.
 # You should always use these functions if they fulfill what you need to do.
@@ -157,9 +157,16 @@ func add_effect_entry(entry : Dictionary) -> void:
 
 ## A function to add scenes into the multiplayer spawner.
 ## This is necessary to have nodes appear for the host and client on multiplayer!
-# resourcePath | A string filepath to the resource to be spawned for clients
+# resourcePath | A string filepath to the scene to be spawned for clients
 func add_spawner_entry(resourcePath : String) -> void:
 	Global.spawnerTable.push_back(resourcePath)
+	
+	
+## A function to add UI into the multiplayer spawner
+## This is necessary to have UI properly work on multiplayer!
+# resourcePath | A string filepath to the resource to be spawned for clients
+func add_ui_spawner_entry(resourcePath : String) -> void:
+	Global.uiSpawnerTable.push_back(resourcePath)
 
 
 #---------------MISC FUNCTIONS---------------#
