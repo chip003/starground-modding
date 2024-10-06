@@ -1,0 +1,8 @@
+.sidebar-nav > ul > li {
+    color:aquamarine
+}
+
+.app-name {
+    max-width: 200px;
+    max-height: 200px;
+}
