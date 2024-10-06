@@ -7,7 +7,7 @@
 	* General Information
 		* [Info.json Explained](_general/info-JSON.md)
 		* [What is not Possible](_general/not-possible.md)
-		* [Contributing to the Wiki](_todo.md)
+		* [Contributing to the Wiki](_general/wiki-contribute.md)
 * Asset Guides
     * [Art Guide](_art/Art-Guide.md)
 * Scripting Guides
