@@ -13,4 +13,24 @@ I will be showing how to open a Pull Request on [Github Modding Repo](https://gi
 #### Click the `New pull request` button
 ![New Pull Request Button](https://i.imgur.com/hEn91Z2.png)
 
-#### 
+#### Comparing Across Forks
+Now that you are in the New Pull Request Page, click the `compare across forks` text at the top of the page.
+![compare across fork text](https://i.imgur.com/f1d5jKq.png)
+
+#### Now Fill-out Pull Request Information
+There is three things on this page that you need to do. The first is selecting your fork of the repository. (marked by yellow line on image)
+
+The second thing to change if needed is the branch (main is fine if you didn't create a branch for the changes on your fork.) It is marked by the red line.
+
+The last thing is clicking the `Create pull request` button. Its circled in green.
+
+![information guide](https://i.imgur.com/Jd7ShZe.png)
+
+
+#### You should now see your pull-request.
+An example of a Pull Request is below.
+![example pull request](https://i.imgur.com/etHENfb.png)
+
+
+## Some Notes about Pull Request.
+A pull request being created doesn't mean that the wiki will now show your information. For your changes to go live on the wiki page, Big Boy (Jessie) has to accept and merge the pull request into the official modding repository.
