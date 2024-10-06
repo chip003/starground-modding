@@ -16,4 +16,4 @@
     * [Restricted Classes/Namespaces](_scripting/Restricted-Namespace.md)
     * [ModAPI Class](_scripting/ModAPI.md)
 * Examples & Open-Source
-	* [Open-Source Mods](todo.md)
+	* [Open-Source Mods](_todo.md)
