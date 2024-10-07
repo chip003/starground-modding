@@ -6,5 +6,5 @@ If you have any questions, feel free to ask away on Discord in the modding categ
 Modders are encouraged to leave issues on this repository in order to improve modding support. This could be a feature suggestion for modding resources, or potential improvements to documentation.
 
 ## Where to Start
-* [How to Start Modding](_general/Getting-Started-With-Modding.md)
+* [How to Start Modding](_general/tips-and-tricks.md)
 * [How to Install Mods](_general/Installing-Mods.md)
