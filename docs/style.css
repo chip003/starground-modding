@@ -6,3 +6,23 @@
     max-width: 200px;
     max-height: 200px;
 }
+
+.alert {
+    position: relative;
+    display: block;
+    padding: 1em 1.8em;
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    background: transparent;
+    color: white;
+}
+
+/* Error */ 
+.alert-error { 
+  background: #e74c3c; 
+  border: 1px solid #c0392b; 
+}
