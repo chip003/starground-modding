@@ -33,4 +33,4 @@ An example of a Pull Request is below.
 
 
 ## Some Notes about Pull Request.
-A pull request being created doesn't mean that the wiki will now show your information. For your changes to go live on the wiki page, Big Boy (Jessie) has to accept and merge the pull request into the official modding repository.
+A pull request being created doesn't mean that the wiki will now show your information. For your changes to go live on the wiki page, Big Boy (Jesse) has to accept and merge the pull request into the official modding repository.
