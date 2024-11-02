@@ -2,7 +2,7 @@ extends Node
 
 ## Welcome to the ModAPI script!
 
-## Script Version: v1.2
+## Script Version: v1.4
 
 # This is a helper script to make modding a lot easier, and to prevent conflicts with other mods.
 # You should always use these functions if they fulfill what you need to do.
@@ -94,7 +94,7 @@ func create_research_entry(researchID, researchName, inputItems, unlocks, specia
 	
 	return entry
 
-## Adds a research entry to the buildings table.
+## Adds a research entry to the research table.
 # researchID | A unique ID for a research (e.x. starground:research_better_automation)
 # entry      | A dictionary with research info (see above for example)
 func add_research_entry(researchID : String, entry : Dictionary) -> void:
@@ -170,6 +170,20 @@ func add_ui_spawner_entry(resourcePath : String) -> void:
 
 
 #---------------MISC FUNCTIONS---------------#
+
+#TODO: integrate Global functions into ModAPI
+
+## A function to replace resources on startup
+## Good for keeping files in your own folder, but still replacing assets
+# oldPath | A string filepath to the resource to be replaced
+# newPath | A string filepath to the resource that is replacing the other one
+func replace_path(oldPath : String, newPath : String) -> void:
+	if newPath.contains("global.gd"):
+		printerr("Invalid overriding of global.gd!")
+		return
+		
+	load(newPath).take_over_path(oldPath)
+
 
 ## A function to add stuff into the list of scenes or resources to be loaded on startup.
 ## This is recommended to improve load times and general performance.
