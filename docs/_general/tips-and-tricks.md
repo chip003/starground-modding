@@ -32,9 +32,9 @@ In order to replace base-game assets, you only need to name them the same thing 
 ## Exporting
 When you've built your mod exporting is pretty straight forward, but there are a few things to be aware of.
 
-First you need to build an export preset in the export tab under Project. Under scripts inside of your export preset, you need to set GDScript Export Mode to Text (easier debugging). This is so that Starground can scan your mod for malicious code.
+First you need to build an export preset in the export tab under `Project`. Under scripts inside of your export preset, you need to set GDScript Export Mode to `Text` (easier debugging). This is so that Starground can scan your mod for malicious code.
 
-Once your export settings are configured properly, export it as a ZIP (not a pck!). Do this by manually selecting ZIP file on the bottom right. Name your .zip, and you're good to go!
+Once your export settings are configured properly, export it as a *ZIP* (not a pck!). Do this by manually selecting `ZIP file` on the bottom right. Name your .zip, and you're good to go!
 
 ## Tips
 1. You should avoid replacing base-game scenes and code as little as possible. Every time you modify something in vanilla Starground, you run the risk of conflicting with other mods. You should always use the ModAPI script for adding your modded content into the game in the proper way.
