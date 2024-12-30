@@ -4,7 +4,7 @@ While contribution are helpful and accepted, they are not a requirement and you 
 
 ***
 ### Forking the Github Repository.
-Due to the nature of Github and the way not collaborators have to to submit Pull-Requests, you will need to for the main [Modding Github Repo](https://github.com/chip003/starground-modding). This will allow you to make local changes to the wiki and use them in a Pull-Request.
+Due to the nature of Github and the way not collaborators have to to submit Pull-Requests, you will need to fork the main [Modding Github Repo](https://github.com/chip003/starground-modding). This will allow you to make local changes to the wiki and use them in a Pull-Request.
 ### Making your Changes
 Now you can clone your forked repository to your computer. Once you have done so, you can open the `docs/` directory and make edits to the `.md` files which is the content for the wiki. Make sure to update `_sidebar.md` for your pages to be shown.
 ### Creating a Pull Request
