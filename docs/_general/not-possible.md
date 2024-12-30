@@ -1,5 +1,5 @@
 # What is and is not possible with Modding?
-Due to the nature of the Godot Engine many things are possible, and more than you would think. So let's cover what is not possible. Below is a list of things that are not possible:
+Due to the nature of the Godot Engine many things are possible, and more than you would think. So let's cover what is not possible. Below is a list of things that are not possible.
 
 -  Implementing Logic that utilizes an Engine Extension
 -  Defining a Global/Autoload Script. (Trying to find workaround)
