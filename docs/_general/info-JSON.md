@@ -1,5 +1,5 @@
 # Info JSON Schema
-Mod Developers are required to include a JSON Schema that contains information about their mod within the packed version of their mod. Below is a explanation of the `info.json` file that is required in every mod.
+Mod Developers are required to include a JSON Schema that contains information about their mod within the packed version of their mod. Below is an explanation of the `info.json` file that is required in every mod.
 
 ### Example `info.json` File
 ```json
