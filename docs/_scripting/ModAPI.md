@@ -33,8 +33,8 @@ How to use the `add_building_entry` method and a overview of its parameters is b
 
 | Parameters   | Description of Variable                                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------- |
-| researchID   | Should be a unique ID that never changes                                                          |
-| researchName | The display name of the research                                                                  |
+| buildingID   | A unique ID for a building                                                                        |
+| entry        | A dictionary with building info (see above for example)                                           |
 
 ```gdscript
 ModAPI.add_building_entry(buildingID, entry)
