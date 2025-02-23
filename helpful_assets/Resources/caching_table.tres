@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://draw3rc4e7p53"]
+
+[ext_resource type="Script" path="res://Resources/caching_table.gd" id="1_ccko6"]
+
+[resource]
+script = ExtResource("1_ccko6")

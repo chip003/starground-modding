@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b58n73kdks4m3"]
+
+[ext_resource type="Script" path="res://Resources/research_table.gd" id="1_t75fq"]
+
+[resource]
+script = ExtResource("1_t75fq")

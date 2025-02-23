@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dd12rwnjnd7ld"]
+
+[ext_resource type="Script" path="res://Resources/commands_table.gd" id="1_rr6np"]
+
+[resource]
+script = ExtResource("1_rr6np")

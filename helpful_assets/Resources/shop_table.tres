@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bb1win0o7wupg"]
+
+[ext_resource type="Script" path="res://Resources/shop_table.gd" id="1_ddo6k"]
+
+[resource]
+script = ExtResource("1_ddo6k")

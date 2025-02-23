@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bqetc0mnccvmi"]
+
+[ext_resource type="Script" path="res://Resources/recipe_table.gd" id="1_xafnn"]
+
+[resource]
+script = ExtResource("1_xafnn")

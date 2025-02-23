@@ -1,8 +1,9 @@
-[gd_resource type="Theme" load_steps=28 format=3 uid="uid://dhr0128vapequ"]
+[gd_resource type="Theme" load_steps=31 format=3 uid="uid://dhr0128vapequ"]
 
 [ext_resource type="StyleBox" uid="uid://m4ssovdxodv7" path="res://Themes/button_dark.tres" id="1_ome0p"]
 [ext_resource type="StyleBox" uid="uid://bgmhxqw2tnfg" path="res://Themes/button_hover.tres" id="2_1tavf"]
 [ext_resource type="StyleBox" uid="uid://dibl4t5qufe4j" path="res://Themes/button_normal.tres" id="3_invkb"]
+[ext_resource type="StyleBox" uid="uid://cil34nxs25ln5" path="res://Themes/button_research_done.tres" id="4_37f2a"]
 [ext_resource type="StyleBox" uid="uid://dc8rixrb5h5kn" path="res://Themes/grabber.tres" id="4_oo5px"]
 [ext_resource type="StyleBox" uid="uid://cgckoq36sp6j6" path="res://Themes/grabber_highlighted.tres" id="5_l1wwx"]
 [ext_resource type="Texture2D" uid="uid://w7hppcmi2bha" path="res://Sprites/grabber.png" id="6_n4py7"]
@@ -62,7 +63,7 @@ shadow_size = 2
 shadow_offset = Vector2(0, 1)
 anti_aliasing_size = 0.1
 
-[sub_resource type="Image" id="Image_trekk"]
+[sub_resource type="Image" id="Image_3nf82"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 179, 179, 179, 153, 178, 178, 178, 166, 184, 184, 184, 18, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 184, 184, 184, 18, 178, 178, 178, 166, 178, 178, 178, 151, 255, 255, 255, 0, 255, 255, 255, 0, 178, 178, 178, 166, 178, 178, 178, 217, 177, 177, 177, 179, 184, 184, 184, 18, 255, 255, 255, 0, 255, 255, 255, 0, 184, 184, 184, 18, 178, 178, 178, 179, 178, 178, 178, 217, 178, 178, 178, 165, 255, 255, 255, 0, 255, 255, 255, 0, 184, 184, 184, 18, 177, 177, 177, 179, 178, 178, 178, 217, 177, 177, 177, 179, 184, 184, 184, 18, 184, 184, 184, 18, 178, 178, 178, 179, 178, 178, 178, 217, 177, 177, 177, 179, 180, 180, 180, 17, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 184, 184, 184, 18, 177, 177, 177, 179, 178, 178, 178, 217, 178, 178, 178, 197, 178, 178, 178, 197, 178, 178, 178, 217, 177, 177, 177, 179, 180, 180, 180, 17, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 184, 184, 184, 18, 177, 177, 177, 179, 178, 178, 178, 217, 178, 178, 178, 217, 177, 177, 177, 179, 180, 180, 180, 17, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 184, 184, 184, 18, 178, 178, 178, 165, 178, 178, 178, 165, 180, 180, 180, 17, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -72,7 +73,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_x5n7t"]
-image = SubResource("Image_trekk")
+image = SubResource("Image_3nf82")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sshp2"]
 bg_color = Color(0.352941, 0.411765, 0.533333, 1)
@@ -96,6 +97,37 @@ bg_color = Color(0.678431, 0.678431, 0.815686, 1)
 border_width_right = 3
 border_color = Color(1, 1, 1, 1)
 corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3d5m"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.635294, 0.14902, 0.2, 1)
+border_width_left = 4
+border_width_right = 4
+border_color = Color(0.894118, 0.231373, 0.266667, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_size = 2
+shadow_offset = Vector2(0, 1)
+anti_aliasing_size = 0.1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psfxu"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.137255, 0.137255, 0.203922, 1)
+border_width_top = 4
+border_color = Color(0.137255, 0.137255, 0.203922, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+shadow_size = 2
+shadow_offset = Vector2(0, 1)
+anti_aliasing_size = 0.1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbny5"]
 content_margin_left = 8.0
@@ -178,6 +210,8 @@ CheckButton/styles/hover = ExtResource("2_1tavf")
 CheckButton/styles/hover_pressed = ExtResource("2_1tavf")
 CheckButton/styles/normal = ExtResource("1_ome0p")
 CheckButton/styles/pressed = ExtResource("3_invkb")
+GreenButton/base_type = &"Button"
+GreenButton/styles/normal = ExtResource("4_37f2a")
 HScrollBar/styles/grabber = ExtResource("4_oo5px")
 HScrollBar/styles/grabber_highlight = ExtResource("5_l1wwx")
 HScrollBar/styles/grabber_pressed = ExtResource("4_oo5px")
@@ -211,6 +245,9 @@ PopupMenu/styles/panel = SubResource("StyleBoxFlat_s6f0s")
 PopupMenu/styles/separator = SubResource("StyleBoxLine_6m3eb")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_ri8jm")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_0rfql")
+RedButton/base_type = &"Button"
+RedButton/styles/normal = SubResource("StyleBoxFlat_w3d5m")
+TabContainer/styles/tab_disabled = SubResource("StyleBoxFlat_psfxu")
 TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_vbny5")
 TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_oikj5")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_0pptc")

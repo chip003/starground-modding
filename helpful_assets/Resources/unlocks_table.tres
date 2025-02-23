@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ctecdv68muwsw"]
+
+[ext_resource type="Script" path="res://Resources/unlocks_table.gd" id="1_x3nw2"]
+
+[resource]
+script = ExtResource("1_x3nw2")

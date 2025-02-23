@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b8e7a1wxf2ymq"]
+
+[ext_resource type="Script" path="res://Resources/spawner_table.gd" id="1_hpfkg"]
+
+[resource]
+script = ExtResource("1_hpfkg")

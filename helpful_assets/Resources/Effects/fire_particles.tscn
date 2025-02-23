@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://0q2nd66d38nj"]
+
+[ext_resource type="Texture2D" uid="uid://bbrbh5yo8pyhg" path="res://Sprites/fire_particle.png" id="1_pocbv"]
+
+[sub_resource type="Gradient" id="Gradient_iwfyd"]
+offsets = PackedFloat32Array(0, 0.144279, 0.59204, 1)
+colors = PackedColorArray(1, 1, 0, 0, 1, 0.858824, 0, 0.67451, 1, 0.419608, 0, 0.792157, 1, 0, 0, 0)
+
+[node name="FireParticles" type="CPUParticles2D"]
+amount = 16
+lifetime = 0.5
+texture = ExtResource("1_pocbv")
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector2(0, -1)
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_min = -15.0
+angle_max = 15.0
+scale_amount_max = 2.0
+color_ramp = SubResource("Gradient_iwfyd")

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dti061e2w5ddi"]
+
+[ext_resource type="Script" path="res://Resources/effects_table.gd" id="1_hp3uv"]
+
+[resource]
+script = ExtResource("1_hp3uv")

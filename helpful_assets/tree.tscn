@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://4w4s4frfn3r0"]
+[gd_scene load_steps=11 format=3 uid="uid://4w4s4frfn3r0"]
 
 [ext_resource type="Script" path="res://Scripts/tree.gd" id="1_old3k"]
 [ext_resource type="Texture2D" uid="uid://cmjvqifdeyy5y" path="res://Sprites/tree.png" id="2_bnfnt"]
 [ext_resource type="Shader" path="res://Scenes/wind_shader.gdshader" id="2_kj2l4"]
 [ext_resource type="Texture2D" uid="uid://dsm1ktek3cxke" path="res://Sprites/tree_shadow.png" id="3_kai3l"]
-[ext_resource type="PackedScene" uid="uid://cwp641fjj4pdk" path="res://Scenes/save_component.tscn" id="4_mynyw"]
 [ext_resource type="Texture2D" uid="uid://cib43bnwkpfvu" path="res://Sprites/dust_particle.png" id="6_jp2yq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hbqap"]
@@ -34,8 +33,9 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.174033, 1)
 colors = PackedColorArray(0.207843, 0.207843, 0.298039, 1, 0.207843, 0.207843, 0.298039, 1, 0.207843, 0.207843, 0.298039, 0)
 
-[node name="tree" type="StaticBody2D" groups=["Resources", "Save", "Trees"]]
+[node name="tree" type="StaticBody2D" groups=["Trees"]]
 collision_layer = 5
+collision_mask = 0
 script = ExtResource("1_old3k")
 
 [node name="mainSprite" type="Sprite2D" parent="."]
@@ -56,8 +56,6 @@ replication_config = SubResource("SceneReplicationConfig_ns8cr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_wm7c1")
-
-[node name="save_component" parent="." instance=ExtResource("4_mynyw")]
 
 [node name="DecayParticles" type="CPUParticles2D" parent="."]
 emitting = false
