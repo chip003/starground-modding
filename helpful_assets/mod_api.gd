@@ -2,7 +2,7 @@ extends Node
 
 ## Welcome to the ModAPI script!
 
-## Script Version: v1.7
+## Script Version: v1.8
 
 # This is a helper script to make modding a lot easier, and to prevent conflicts with other mods.
 # You should always use these functions if they fulfill what you need to do.
@@ -68,9 +68,13 @@ func add_shop_entry(shopID : String, entry : Dictionary) -> void:
 
 ## A function to add a recipe entry to the recipe table.
 # buildingID | A unique ID for a building to attach a recipe to (e.x. starground:building_crafter)
+# recipeID   | A unique ID for a building's recipe (e.x. starground:recipe_strength_potion)
 # entry      | A recipe data dictionary
-func add_recipe_entry(buildingID, entry : Dictionary) -> void:
-	Global.recipeTable.merge({buildingID: entry}, true)
+func add_recipe_entry(buildingID : String, recipeID : String, entry : Dictionary) -> void:
+	if Global.recipeTable.has(buildingID):
+		Global.recipeTable[buildingID].merge({recipeID: entry}, true)
+	else:
+		Global.recipeTable[buildingID] = {recipeID: entry}
 
 
 ## A function to add a region entry to the regions table.
@@ -108,7 +112,10 @@ func add_cache_entry(resourcePath : String) -> void:
 # lootID | An ID for what loot table is being modified (e.x. starground:loot_dreadcap)
 # entry  | A new data entry (typically an array formatted with weight first, and a string or resource next)
 func add_loot_entry(lootID : String, entry : Array) -> void:
-	Global.lootTable.merge({lootID: [entry]})
+	if Global.lootTable.has(lootID):
+		Global.lootTable[lootID].push_back(entry)
+	else:
+		Global.lootTable[lootID] = [entry]
 
 
 ## A function to add scenes into the multiplayer spawner.
@@ -129,7 +136,7 @@ func add_ui_spawner_entry(resourcePath : String) -> void:
 # command | The string to run your command (e.x. /give)
 # entry   | A path to your command script (see other command scripts on how to set them up)
 func add_command(command : String, scriptPath : String) -> void:
-	Global.commandsTable.merge({command: {"Resource": scriptPath}})
+	Global.commandsTable.merge({command: {"Resource": scriptPath}}, true)
 
 #endregion
 
