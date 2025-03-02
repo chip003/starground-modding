@@ -2,7 +2,7 @@ extends Node
 
 ## Welcome to the ModAPI script!
 
-## Script Version: v1.8
+## Script Version: v1.9
 
 # This is a helper script to make modding a lot easier, and to prevent conflicts with other mods.
 # You should always use these functions if they fulfill what you need to do.
@@ -116,6 +116,16 @@ func add_loot_entry(lootID : String, entry : Array) -> void:
 		Global.lootTable[lootID].push_back(entry)
 	else:
 		Global.lootTable[lootID] = [entry]
+
+
+## This function will add a scene to the player's UI Canvas node
+## All UI is a child of the Canvas node, which is a child of the player
+## The owner variable will be set to the player on instantiation
+## UI is added on both the server and client (for data transmission), so be aware of what needs to be enabled/disabled
+## ! add_ui_spawner_entry() is not needed for player UI !
+# scenePath | A path to the scene that will be added to player UI
+func add_player_ui(scenePath) -> void:
+	Global.playerUIScenes.push_back(scenePath)
 
 
 ## A function to add scenes into the multiplayer spawner.
