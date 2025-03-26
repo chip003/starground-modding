@@ -4,8 +4,8 @@ func _init() -> void:
 	## The init function is where you can integrate your mod content
 	
 	## Adding an item
-	var funnyItem = ModAPI.create_item_entry("bbg_templatemod:item_funny_item", "Funny Item", load("res://Sprites/Items/funny_item_example.png"), [])
-	ModAPI.add_item_entry(funnyItem)
+	var funnyItem = ModAPI.create_item_entry("Funny Item", load("res://Sprites/Items/funny_item_example.png"), {})
+	ModAPI.add_item_entry("bbg_templatemod:item_funny_item", funnyItem)
 	
 	## Adding a building
 	var buildingEntry = {
