@@ -1,0 +1,53 @@
+[gd_resource type="AudioBusLayout" load_steps=6 format=3 uid="uid://by3046u43c81n"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_pfyhd"]
+resource_name = "Reverb"
+room_size = 0.5
+wet = 0.1
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_6lsoo"]
+resource_name = "LowPassFilter"
+cutoff_hz = 800.0
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_wb47q"]
+resource_name = "Distortion"
+mode = 4
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_uqgco"]
+resource_name = "Reverb"
+room_size = 0.3
+wet = 0.1
+
+[sub_resource type="AudioEffectStereoEnhance" id="AudioEffectStereoEnhance_o5qha"]
+resource_name = "StereoEnhance"
+pan_pullout = 4.0
+
+[resource]
+bus/1/name = &"Sound Effects"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/2/name = &"Music"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"Sound Effects World"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"Sound Effects"
+bus/3/effect/0/effect = SubResource("AudioEffectReverb_pfyhd")
+bus/3/effect/0/enabled = false
+bus/3/effect/1/effect = SubResource("AudioEffectLowPassFilter_6lsoo")
+bus/3/effect/1/enabled = false
+bus/3/effect/2/effect = SubResource("AudioEffectDistortion_wb47q")
+bus/3/effect/2/enabled = false
+bus/3/effect/3/effect = SubResource("AudioEffectReverb_uqgco")
+bus/3/effect/3/enabled = false
+bus/3/effect/4/effect = SubResource("AudioEffectStereoEnhance_o5qha")
+bus/3/effect/4/enabled = false
