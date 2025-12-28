@@ -9,8 +9,8 @@ Currently, decompiling the game is allowed; however, redistributing any of the p
 ***
 ## Decompiling Requirements
 - Have the version of Starground installed via Steam.
-- You will need a custom version of Godot engine called *GodotSteam* found [here](https://github.com/GodotSteam/MultiPlayerPeer/releases/tag/v4.11-mp).
-- You will need GDSdecomp from [here](https://github.com/GDRETools/gdsdecomp/releases/tag/v1.0.0).
+- You will need a custom version of Godot engine called *GodotSteam* found [here](https://codeberg.org/godotsteam/godotsteam/releases/tag/v4.17).
+- You will need GDSdecomp from [here](https://github.com/GDRETools/gdsdecomp/releases/tag/v2.4.0).
 - Basic understanding of the Godot Engine to fix any decompile issues. (Decompile doesn't always work properly)
 
 ## Setting Up Project
